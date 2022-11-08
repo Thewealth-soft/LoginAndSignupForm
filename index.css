@@ -1,0 +1,227 @@
+*,
+*::before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  font-family: "poppins", sans-serif;
+}
+
+:root {
+  --color-btn: #D65A31;
+  --text-color: wheat;
+  --color-gray-box: 3px 3px rgb(219, 204, 204);
+  --color-gray-box2: 3px 3px rgb(219, 204, 204);
+  --color-bgd: #eeee;
+  --color-bgd2: #222831;
+  --color-btn-h: #393E46;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-bgd);
+  font-family: "poppins", sans-serif;
+}
+
+/* General styling */
+p {
+  font-size: 0.7rem;
+  font-weight: 300;
+  line-height: 0;
+  margin-top: 1rem;
+  margin-left: 0.4rem;
+}
+
+.bi-eye-slash {
+  position: relative;
+  cursor: pointer;
+}
+
+input {
+  align-items: center;
+  font-size: 0.8rem;
+  border: none;
+  border-radius: 0.4rem;
+  height: 1.8rem;
+  width: 12rem;
+  padding: 0.3rem;
+  margin-bottom: 0.5rem;
+  box-shadow: var(--color-gray-box);
+
+}
+
+button {
+  font-size: 1rem;
+  width: 11rem;
+  height: 2.2rem;
+  margin-top: 1rem;
+  margin-left: 0.5rem;
+  border: none;
+  border-radius: 0.4rem;
+  color: var(--text-color);
+  background: var(--color-btn);
+  cursor: pointer;
+  box-shadow: 3px 3px rgb(219, 204, 204);
+  transition: 500ms all ease-out;
+}
+
+button:hover {
+  color: #fff;
+  background: var(--color-btn-h);
+}
+
+.container__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  line-height: 5rem;
+}
+
+/* Toggle section */
+
+.field {
+  height: 22rem;
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
+  border-radius: 0.8rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  box-shadow: 3px 5px var(--color-gray-box2);
+  background: var(--color-bgd2);
+}
+
+#field2 {
+  display: none;
+  margin-top: 3rem;
+}
+
+.toggle {
+  width: 12rem;
+  height: 2.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  position: fixed;
+  border-radius: 1rem;
+  padding: 0;
+  margin-top: -14rem;
+  background: #fff;
+  box-shadow: var(--color-gray-box);
+  transition: 300ms all ease-in;
+}
+
+.toggle>input[type="radio"] {
+  display: none;
+}
+
+.slide__login {
+  padding-left: 25px;
+}
+
+.slide__signup {
+  padding-right: 25px;
+}
+
+.toggle>#login:checked~.slide__login,
+.toggle>#signup:checked~.slide__signup {
+  width: 5.5rem;
+  height: 2.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0px;
+  background: var(--color-btn);
+  color: var(--text-color);
+  border-radius: 1rem;
+  transition: 500ms all ease-out;
+}
+
+.toggle>#login:checked~.slide__login:hover,
+.toggle>#signup:checked~.slide__signup:hover {
+  color: #ffff;
+  background: var(--color-btn-h);
+}
+
+.toggle>label {
+  font-size: 15px;
+  display: inline-block;
+  text-align: center;
+  color: rgb(21, 21, 226);
+  cursor: pointer;
+}
+
+.signup__option,
+.login__option {
+  color: #fffF;
+  text-align: center;
+}
+
+.login,
+.Signup {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+}
+
+#field1 span {
+  display: flex;
+  font-size: 0.9rem;
+}
+
+form i {
+  margin-left: -30px;
+}
+
+form p {
+  margin: 0;
+}
+
+/*******************Animation*********************/
+
+/* Animation for Loginup */
+.login {
+  animation: myAnimate2 1s linear forwards;
+}
+
+@keyframes myAnimate2 {
+  0% {
+    /* transform: rotate(-50deg); */
+    height: 50px;
+  }
+
+  100% {
+    /* transform: rotate(0); */
+    height: 100px;
+  }
+}
+
+/* Animation for Signup */
+.signup {
+  animation: myAnimate 2s forwards;
+}
+
+@keyframes myAnimate {
+  0% {
+    /* transform: rotate(-50deg); */
+    height: 40px;
+  }
+
+  100% {
+    /* transform: rotate(0); */
+    height: 150px;
+  }
+}
